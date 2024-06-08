@@ -105,13 +105,11 @@ html {
 
 .section-1-heading {
   font-size: 8rem;
-  /* font-family: "Monoton", cursive; */
   font-family: "Pacifico", sans-serif;
   position: absolute;
-  top: 18vw;
+  top: calc(62% - 10rem); /* Adjust this value to fine-tune the position */
   left: 50%;
   transform: translateX(-50%);
-  /* text-shadow: 0.3rem 0.3rem 0.3rem #888; */
   text-shadow: 2px 4px 3px rgba(163, 163, 163, 0.3);
   color: #91f2ff;
   background-color: #fff;
@@ -123,6 +121,7 @@ html {
   opacity: 0.9;
   padding-bottom: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 0; /* Ensure there's no margin */
 }
 
 .logo {
@@ -131,6 +130,37 @@ html {
   left: 50%;
   transform: translateX(-50%);
 }
+
+.logo img {
+  font-size: 8rem;
+  font-family: "Pacifico", sans-serif;
+  text-shadow: 2px 4px 3px rgba(163, 163, 163, 0.3);
+  color: #91f2ff;
+  background-color: #fff;
+  width: 85rem;
+  letter-spacing: 10px;
+  text-align: center;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  border-radius: 0.8rem;
+  padding-bottom: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeIn 1.7s ease-in forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 .logo i {
   font-size: 15rem;
@@ -188,11 +218,12 @@ html {
 .customer-text {
   font-size: 1.8rem;
   margin: 2.5rem 0;
-  text-align: justify;
+  text-align: start;
 }
 
 .customer-text::first-letter {
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
+  font-size: 2.9rem;
 }
 
 .customer-rating i {
@@ -366,9 +397,13 @@ html {
 .story-paragraph {
   font-size: 1.8rem;
   color: #eee;
-  text-align: justify;
-  letter-spacing: 0.1rem;
-  text-indent: 2rem;
+  font-weight: 900;
+  /* text-align: justify; */
+  letter-spacing: 0.3rem;
+  /* text-indent: 0rem; */
+  background-color: #28c6d7;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 
@@ -675,7 +710,6 @@ html {
 /* End of Responsive */
 
 /* HERO SECTION */
-
 /* Hero Section */
 .hero-section {
   width: 100%;
@@ -692,6 +726,7 @@ html {
   opacity: 0;  /* Initial state for fade-in effect */
   transition: opacity 1.6s ease-in-out;  /* Transition for fade-in effect */
   box-shadow: 0 0 0px 0px white inset;
+  margin-top: 400px;
 }
 
 .hero-section::before {
@@ -802,3 +837,24 @@ body.scrolled .hero-section {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* 
+.section-1, .hero-section, .section-2, .section-3 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+} */
