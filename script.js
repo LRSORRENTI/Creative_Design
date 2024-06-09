@@ -75,12 +75,45 @@
 //     });
 // });
 
-document.querySelectorAll('.story-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
+// document.querySelectorAll('.story-btn').forEach(function (btn) {
+//     btn.addEventListener('click', function () {
+//         this.classList.toggle('change');
+//         this.nextElementSibling.classList.toggle('change');
+//     });
+// });
+
+// // Combine both '.story-btn' and '.projects-btn' in a single query
+// document.querySelectorAll('.projects-btn').forEach(function (btn) {
+//     // btn.addEventListener('click', function (event) {
+//     //     event.preventDefault(); // Prevent the default action of the <a> tag
+//     //     this.classList.toggle('change');
+//     //     this.nextElementSibling.classList.toggle('change');
+//     // });
+//     btn.addEventListener('click', function () {
+//         this.classList.toggle('change');
+//         this.nextElementSibling.classList.toggle('change');
+//     });
+// });
+
+
+// Combine both '.story-btn' and '.projects-btn' in a single query
+document.querySelectorAll('.story-btn, .projects-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default action of the <a> tag if clicked
         this.classList.toggle('change');
-        this.nextElementSibling.classList.toggle('change');
+
+        // Find the closest .team-member ancestor
+        var teamMember = this.closest('.team-member');
+        if (teamMember) {
+            // Toggle the change class on the .story element within this .team-member
+            var story = teamMember.querySelector('.story');
+            if (story) {
+                story.classList.toggle('change');
+            }
+        }
     });
 });
+
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > 50) {

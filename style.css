@@ -122,6 +122,7 @@ html {
   text-align: center;
   padding: 0.8rem 1.6rem;
   border-radius: 0.8rem;
+  border: 2px solid #FFF;
   opacity: 0.9;
   padding-bottom: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -403,14 +404,15 @@ html {
 
 .story-paragraph {
   font-size: 1.8rem;
-  color: #eee;
-  font-weight: 900;
+  color: #868686;
+  font-weight: bolder;
   /* text-align: justify; */
   letter-spacing: 0.3rem;
   /* text-indent: 0rem; */
-  background-color: #28c6d7;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 
@@ -673,7 +675,7 @@ html {
   .section-1-heading {
     top: 100px;
     width: 42rem;
-    font-size: 2.7rem;
+    font-size: 2.3rem;
     padding-bottom: 10px;
     text-shadow: none;
   }
