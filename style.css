@@ -17,10 +17,12 @@ html {
   scroll-behavior: smooth;
 }
 
-.container {
+/* .container {
   width: 100%;
   overflow-x: hidden;
-}
+} */
+
+
 
 .section-heading {
   font-size: 10rem;
@@ -36,10 +38,12 @@ html {
 /* Section 1 */
 .section-1 {
   width: 100%;
-  height: 100vh;
+  height: 20vh;
   background-color: #fff;
   position: relative;
 }
+
+
 
 /*  */
 
@@ -105,24 +109,24 @@ html {
 
 .section-1-heading {
   font-size: 8rem;
-  /* font-family: "Monoton", cursive; */
   font-family: "Pacifico", sans-serif;
   position: absolute;
-  top: 18vw;
+  top: 100px; /* Adjust this value to fine-tune the position */
   left: 50%;
   transform: translateX(-50%);
-  /* text-shadow: 0.3rem 0.3rem 0.3rem #888; */
   text-shadow: 2px 4px 3px rgba(163, 163, 163, 0.3);
-  color: #91f2ff;
-  background-color: #fff;
+  color: #ffffff;
+  background-color: #ffffff61;
   width: 85rem;
   letter-spacing: 10px;
   text-align: center;
   padding: 0.8rem 1.6rem;
   border-radius: 0.8rem;
+  border: 2px solid #FFF;
   opacity: 0.9;
   padding-bottom: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 0; /* Ensure there's no margin */
 }
 
 .logo {
@@ -131,6 +135,37 @@ html {
   left: 50%;
   transform: translateX(-50%);
 }
+
+.logo img {
+  font-size: 8rem;
+  font-family: "Pacifico", sans-serif;
+  text-shadow: 2px 4px 3px rgba(163, 163, 163, 0.3);
+  color: #91f2ff;
+  background-color: #fff;
+  width: 85rem;
+  letter-spacing: 10px;
+  text-align: center;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  border-radius: 1.8rem;
+  padding-bottom: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeIn 0.9s ease-in forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 .logo i {
   font-size: 15rem;
@@ -188,11 +223,12 @@ html {
 .customer-text {
   font-size: 1.8rem;
   margin: 2.5rem 0;
-  text-align: justify;
+  text-align: start;
 }
 
 .customer-text::first-letter {
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
+  font-size: 2.9rem;
 }
 
 .customer-rating i {
@@ -234,7 +270,7 @@ html {
 
 .team-member {
   width: 35rem;
-  background-color: #fffeee;
+  background-color: #ffffff;
   padding: 1rem 1rem 2rem 1rem;
   box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
   position: relative;
@@ -258,12 +294,15 @@ html {
 .team-member-img {
   width: 100%;
   border-radius: 0.5rem;
+  object-fit: cover;
+  background: center;
+  max-height: 300px;
 }
 
 .team-member-name {
   font-size: 2.3rem;
   font-weight: 700;
-  color: #796717;
+  color: #444444;
   margin-top: 2rem;
 }
 
@@ -365,10 +404,15 @@ html {
 
 .story-paragraph {
   font-size: 1.8rem;
-  color: #eee;
-  text-align: justify;
-  letter-spacing: 0.1rem;
-  text-indent: 2rem;
+  color: #868686;
+  font-weight: bolder;
+  /* text-align: justify; */
+  letter-spacing: 0.3rem;
+  /* text-indent: 0rem; */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 
@@ -494,6 +538,10 @@ html {
 }
 
 /* Responsive */
+/* Responsive */
+
+
+
 @media (max-width: 1400px) {
   .floating-bg {
     top: -120vw;
@@ -501,7 +549,7 @@ html {
 
   .section-1-heading {
     font-size: 6rem;
-    top: 25vw;
+    top: 100px;
     width: 70rem;
   }
 
@@ -574,7 +622,7 @@ html {
 
   .section-1-heading {
     font-size: 5rem;
-    top: 30vw;
+    top: 100px;
     width: 60rem;
   }
 
@@ -589,7 +637,7 @@ html {
   }
 
   .section-1-heading {
-    top: 40vw;
+    top: 100px;
   }
 
   .navbar {
@@ -607,7 +655,7 @@ html {
   }
 
   .section-1-heading {
-    top: 48vw;
+    top: 100px;
   }
 
   .section-heading {
@@ -625,9 +673,9 @@ html {
   }
 
   .section-1-heading {
-    top: 65vw;
+    top: 100px;
     width: 42rem;
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     padding-bottom: 10px;
     text-shadow: none;
   }
@@ -675,11 +723,10 @@ html {
 /* End of Responsive */
 
 /* HERO SECTION */
-
 /* Hero Section */
 .hero-section {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   background: url('images/hero-bg.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -692,6 +739,23 @@ html {
   opacity: 0;  /* Initial state for fade-in effect */
   transition: opacity 1.6s ease-in-out;  /* Transition for fade-in effect */
   box-shadow: 0 0 0px 0px white inset;
+  margin-top: 400px;
+}
+
+@media (max-width: 500px) {
+  /* .hero-section {
+    margin-top: 10px;
+    height: 120vh; 
+   
+  } */
+
+  /* .logo {
+    display: none;
+  }
+
+  #home {
+    margin-bottom: 10px;
+  } */
 }
 
 .hero-section::before {
@@ -802,3 +866,24 @@ body.scrolled .hero-section {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* 
+.section-1, .hero-section, .section-2, .section-3 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+} */
